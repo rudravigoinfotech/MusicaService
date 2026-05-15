@@ -48,12 +48,9 @@ class MusicService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        // Foreground Notification setup
         startForegroundServiceWithNotification()
 
-        // Note: mediaPlayer.start() yahan se hata diya hai
-        // kyunki online music load hone mein time leta hai,
-        // wo onPreparedListener ke andar handle ho raha hai.
+        // Note: mediaPlayer.start()
 
         return START_STICKY
     }
